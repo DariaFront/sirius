@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочки — интернет-магазин товаров для животных</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ===== ВЕРХНЯЯ ПЛАНКА ===== -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__city">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                    <circle cx="12" cy="9" r="2.5" />
+                </svg>
+                Санкт-Петербург
+            </div>
+            <div class="header-top__right">
+                <span class="time">Доставка от 1 часа • 24/7</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
+                        <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+                        <circle cx="12" cy="11" r="4" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ОСНОВНАЯ ШАПКА ===== -->
+    <header class="main-header">
+        <div class="container">
+            <!-- ЛОГОТИП -->
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo-lapa.svg" alt="Логотип Лапочки">
+                </a>
+            </div>
+
+            <!-- ПОИСК -->
+            <div class="search-wrap">
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
+                </span>
+                <input type="text" placeholder="Поиск корма, лакомства или игрушки для вашего любимца...">
+            </div>
+
+            <!-- КОНТАКТЫ -->
+            <div class="header-contacts">
+                <div>
+                    <div class="header-contacts__phone">
+                        8 (800) 555-35-35
+                        <small>Бесплатно по РФ</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ИКОНКИ ДЕЙСТВИЙ -->
+            <div class="header-actions">
+                <button class="header-actions__btn" title="Избранное">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                </button>
+                <button class="header-actions__btn" title="Корзина">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="badge">3</span>
+                </button>
+                <button class="header-actions__btn header-actions__btn--search" title="Поиск" id="mobileSearchToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
+                </button>
+
+                <!-- Бургер-меню -->
+                <button class="header-actions__btn header-actions__btn--menu" title="Меню" id="mobileMenuToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5h16" />
+                        <path d="M4 12h16" />
+                        <path d="M4 19h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-search" id="mobileSearch">
+        <div class="mobile-search__inner">
+            <span class="mobile-search__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m21 21-4.34-4.34" />
+                    <circle cx="11" cy="11" r="8" />
+                </svg>
+            </span>
+            <input type="text" placeholder="Поиск корма, лакомства или игрушки...">
+            <button class="mobile-search__close" id="mobileSearchClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container" id="navContainer">
+            <!-- ===== КНОПКА КАТЕГОРИЙ (для планшета) ===== -->
+            <button class="nav-categories-toggle" id="navCategoriesToggle" aria-label="Категории">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 5H3" />
+                    <path d="M12 19H3" />
+                    <path d="M14 3v4" />
+                    <path d="M16 17v4" />
+                    <path d="M21 12h-9" />
+                    <path d="M21 19h-5" />
+                    <path d="M21 5h-7" />
+                    <path d="M8 10v4" />
+                    <path d="M8 12H3" />
+                </svg>
+            </button>
+
+            <!-- ===== ОСНОВНЫЕ РАЗДЕЛЫ (табы) ===== -->
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active" data-category="cats">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z" />
+                        <path d="M8 14v.5" />
+                        <path d="M16 14v.5" />
+                        <path d="M11.25 16.25h1.5L12 17l-.75-.75Z" />
+                    </svg>
+                    Кошки
+                </a>
+                <a href="#" data-category="dogs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11.25 16.25h1.5L12 17z" />
+                        <path d="M16 14v.5" />
+                        <path
+                            d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309" />
+                        <path d="M8 14v.5" />
+                        <path
+                            d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5" />
+                    </svg>
+                    Собаки
+                </a>
+                <a href="#" data-category="puppies">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M11.8438 7.78125C11.1706 7.78322 10.4998 7.86036 9.84375 8.01125C8.06375 6.01125 5.89 2.41995 4.5 2.99995C2.29929 3.91824 3.28125 9.99995 3.28125 9.99995C3.84375 14.8125 6.84375 20.375 12.0625 20.375C16.939 20.375 19.9744 14.8125 20.5 9.99995C20.5 9.99995 21.3064 3.91824 19.25 2.99995C17.9512 2.41995 15.799 6.01125 14.1357 8.01125C13.5227 7.86036 12.8959 7.78322 12.2669 7.78125"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 14V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M16 14V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M11.25 16.25H12.75L12 17L11.25 16.25Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Котята и щенки
+                </a>
+                <a href="#" data-category="other">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="4" r="2" />
+                        <circle cx="18" cy="8" r="2" />
+                        <circle cx="20" cy="16" r="2" />
+                        <path
+                            d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+                    </svg>
+                    Другие питомцы
+                </a>
+                <a href="#" data-category="pharmacy">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m18 2 4 4" />
+                        <path d="m17 7 3-3" />
+                        <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
+                        <path d="m9 11 4 4" />
+                        <path d="m5 19-3 3" />
+                        <path d="m14 4 6 6" />
+                    </svg>
+                    Ветаптека
+                </a>
+                <a href="#" class="nav-sale">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                        <path d="m15 9-6 6" />
+                        <path d="M9 9h.01" />
+                        <path d="M15 15h.01" />
+                    </svg>
+                    Акции
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18h-5" />
+                        <path d="M18 14h-8" />
+                        <path
+                            d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" />
+                        <rect width="8" height="4" x="10" y="6" rx="1" />
+                    </svg>
+                    Статьи
+                </a>
+            </div>
+
+            <!-- ===== ВЫПАДАЮЩИЙ СПИСОК КАТЕГОРИЙ (для планшета) ===== -->
+            <div class="nav-categories-dropdown" id="navCategoriesDropdown">
+                <div class="nav-categories-dropdown__title" id="dropdownTitle">Товары для кошек</div>
+                <div id="dropdownItems">
+                    <a href="#" class="nav-categories-dropdown__item">Сухие корма <span class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item">Влажные корма / Паучи <span
+                            class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item">Наполнители <span class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item">Когтеточки и домики <span
+                            class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item">Игрушки и амуниция <span
+                            class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item">Ветеринарные аптеки <span
+                            class="arrow">›</span></a>
+                    <a href="#" class="nav-categories-dropdown__item highlight">Все категории ➔</a>
+                </div>
+            </div>
+
+            <!-- ===== МОБИЛЬНОЕ МЕНЮ (аккордеон) ===== -->
+            <div class="nav-mobile" id="navMobile">
+                <!-- Кошки -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-cats">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z" />
+                                <path d="M8 14v.5" />
+                                <path d="M16 14v.5" />
+                                <path d="M11.25 16.25h1.5L12 17l-.75-.75Z" />
+                            </svg>
+                            Кошки
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-cats">
+                            <div class="nav-mobile__sub-title">Товары для кошек</div>
+                            <a href="#" class="nav-mobile__sub-item">Сухие корма</a>
+                            <a href="#" class="nav-mobile__sub-item">Влажные корма / Паучи</a>
+                            <a href="#" class="nav-mobile__sub-item">Наполнители</a>
+                            <a href="#" class="nav-mobile__sub-item">Когтеточки и домики</a>
+                            <a href="#" class="nav-mobile__sub-item">Игрушки и амуниция</a>
+                            <a href="#" class="nav-mobile__sub-item">Ветеринарные аптеки</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все категории ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Собаки -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-dogs">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M11.25 16.25h1.5L12 17z" />
+                                <path d="M16 14v.5" />
+                                <path
+                                    d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309" />
+                                <path d="M8 14v.5" />
+                                <path
+                                    d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5" />
+                            </svg>
+                            Собаки
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-dogs">
+                            <div class="nav-mobile__sub-title">Товары для собак</div>
+                            <a href="#" class="nav-mobile__sub-item">Сухие корма</a>
+                            <a href="#" class="nav-mobile__sub-item">Влажные корма / Паучи</a>
+                            <a href="#" class="nav-mobile__sub-item">Лакомства и кости</a>
+                            <a href="#" class="nav-mobile__sub-item">Амуниция и ошейники</a>
+                            <a href="#" class="nav-mobile__sub-item">Игрушки для собак</a>
+                            <a href="#" class="nav-mobile__sub-item">Ветеринарные аптеки</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все категории ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Котята и щенки -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-puppies">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M11.8438 7.78125C11.1706 7.78322 10.4998 7.86036 9.84375 8.01125C8.06375 6.01125 5.89 2.41995 4.5 2.99995C2.29929 3.91824 3.28125 9.99995 3.28125 9.99995C3.84375 14.8125 6.84375 20.375 12.0625 20.375C16.939 20.375 19.9744 14.8125 20.5 9.99995C20.5 9.99995 21.3064 3.91824 19.25 2.99995C17.9512 2.41995 15.799 6.01125 14.1357 8.01125C13.5227 7.86036 12.8959 7.78322 12.2669 7.78125"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8 14V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16 14V14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11.25 16.25H12.75L12 17L11.25 16.25Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Котята и щенки
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-puppies">
+                            <div class="nav-mobile__sub-title">Для малышей</div>
+                            <a href="#" class="nav-mobile__sub-item">Корм для котят</a>
+                            <a href="#" class="nav-mobile__sub-item">Корм для щенков</a>
+                            <a href="#" class="nav-mobile__sub-item">Игрушки для малышей</a>
+                            <a href="#" class="nav-mobile__sub-item">Лежанки и домики</a>
+                            <a href="#" class="nav-mobile__sub-item">Лакомства для котят</a>
+                            <a href="#" class="nav-mobile__sub-item">Лакомства для щенков</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все категории ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Другие питомцы -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-other">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="4" r="2" />
+                                <circle cx="18" cy="8" r="2" />
+                                <circle cx="20" cy="16" r="2" />
+                                <path
+                                    d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+                            </svg>
+                            Другие питомцы
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-other">
+                            <div class="nav-mobile__sub-title">Для других питомцев</div>
+                            <a href="#" class="nav-mobile__sub-item">Для птиц</a>
+                            <a href="#" class="nav-mobile__sub-item">Для грызунов</a>
+                            <a href="#" class="nav-mobile__sub-item">Для рыб</a>
+                            <a href="#" class="nav-mobile__sub-item">Для рептилий</a>
+                            <a href="#" class="nav-mobile__sub-item">Корма и смеси</a>
+                            <a href="#" class="nav-mobile__sub-item">Террариумы и клетки</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все категории ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ветаптека -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-pharmacy">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m18 2 4 4" />
+                                <path d="m17 7 3-3" />
+                                <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
+                                <path d="m9 11 4 4" />
+                                <path d="m5 19-3 3" />
+                                <path d="m14 4 6 6" />
+                            </svg>
+                            Ветаптека
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-pharmacy">
+                            <div class="nav-mobile__sub-title">Ветеринарные препараты</div>
+                            <a href="#" class="nav-mobile__sub-item">Противопаразитарные</a>
+                            <a href="#" class="nav-mobile__sub-item">Витамины и добавки</a>
+                            <a href="#" class="nav-mobile__sub-item">Лекарства</a>
+                            <a href="#" class="nav-mobile__sub-item">Средства от блох и клещей</a>
+                            <a href="#" class="nav-mobile__sub-item">Вакцины</a>
+                            <a href="#" class="nav-mobile__sub-item">Ветдиеты</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все категории ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Акции -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-sales">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                                <path d="m15 9-6 6" />
+                                <path d="M9 9h.01" />
+                                <path d="M15 15h.01" />
+                            </svg>
+                            Акции
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-sales">
+                            <div class="nav-mobile__sub-title">Акции и скидки</div>
+                            <a href="#" class="nav-mobile__sub-item">Скидки на корма</a>
+                            <a href="#" class="nav-mobile__sub-item">Сезонные акции</a>
+                            <a href="#" class="nav-mobile__sub-item">Подарки за покупку</a>
+                            <a href="#" class="nav-mobile__sub-item">Бонусная программа</a>
+                            <a href="#" class="nav-mobile__sub-item">Акции для постоянных</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все акции ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Статьи -->
+                <div class="nav-mobile__section">
+                    <div class="nav-mobile__parent">
+                        <span class="nav-mobile__parent-title" data-target="sub-articles">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M15 18h-5" />
+                                <path d="M18 14h-8" />
+                                <path
+                                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" />
+                                <rect width="8" height="4" x="10" y="6" rx="1" />
+                            </svg>
+                            Статьи
+                            <span class="nav-mobile__arrow">›</span>
+                        </span>
+                        <div class="nav-mobile__sub" id="sub-articles">
+                            <div class="nav-mobile__sub-title">Полезные статьи</div>
+                            <a href="#" class="nav-mobile__sub-item">Уход за питомцами</a>
+                            <a href="#" class="nav-mobile__sub-item">Питание и здоровье</a>
+                            <a href="#" class="nav-mobile__sub-item">Воспитание и дрессировка</a>
+                            <a href="#" class="nav-mobile__sub-item">Советы ветеринара</a>
+                            <a href="#" class="nav-mobile__sub-item">Новости зоомира</a>
+                            <a href="#" class="nav-mobile__sub-item highlight">Все статьи ➔</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+    <main class="container">
+
+        <!-- ===== ГЕРОЙ-СЕКЦИЯ ===== -->
+        <div class="hero">
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar__title" style="margin-top:8px;">Товары для кошек</div>
+                <div class="sidebar__item"><a href="#">Сухие корма <span class="arrow">›</span></a></div>
+                <div class="sidebar__item"><a href="#">Влажные корма / Паучи <span class="arrow">›</span></a></div>
+                <div class="sidebar__item"><a href="#">Наполнители <span class="arrow">›</span></a></div>
+                <div class="sidebar__item"><a href="#">Когтеточки и домики <span class="arrow">›</span></a></div>
+                <div class="sidebar__item"><a href="#">Игрушки и амуниция <span class="arrow">›</span></a></div>
+                <div class="sidebar__item"><a href="#">Ветеринарные аптеки <span class="arrow">›</span></a></div>
+                <div class="sidebar__item highlight"><a href="#">Все категории ➔</a></div>
+            </aside>
+
+            <div class="banner">
+                <div class="banner__content">
+                    <span class="banner__tag">Уют и Забота</span>
+                    <h1 class="banner__title">Умные гаджеты для <span>любимых лапочек</span></h1>
+                    <p class="banner__text ">Инновационные ошейники с биометрическим контролем и мягкие
+                        технологичные
+                        аксессуары для максимального уюта вашего питомца в доме.</p>
+                    <a href="#" class="banner__btn">Смотреть гаджеты</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК: ТОВАРЫ ДНЯ + АКЦИИ + БАННЕР ===== -->
+        <section class="section featured-section">
+            <div class="section__header">
+                <h2 class="section__title">Товары дня</h2>
+                <span class="section__timer">⏱ До конца акции: 21:35:12</span>
+            </div>
+
+            <div class="featured-grid">
+                <div class="product-card">
+                    <span class="product-card__badge">-35%</span>
+                    <div class="product-card__image">
+                        <img src="img/pic8.png" alt="Интерактивная мышка для кошек со светодиодом">
+                    </div>
+                    <div class="product-card__price">
+                        <span class="current">445 ₽</span>
+                        <span class="old">685 ₽</span>
+                    </div>
+                    <div class="product-card__name">Интерактивная мышка для кошек со светодиодом</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge">-20%</span>
+                    <div class="product-card__image"><img src="img/pic4.jpg" alt="Умный ошейник Tech-Care Lite"></div>
+                    <div class="product-card__price">
+                        <span class="current">932 ₽</span>
+                        <span class="old">1 165 ₽</span>
+                    </div>
+                    <div class="product-card__name">Умный ошейник Tech-Care Lite (светоотражающий)</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge">-15%</span>
+                    <div class="product-card__image"><img src="img/pic6.png" alt="Автоматическая поилка-фонтан"></div>
+                    <div class="product-card__price">
+                        <span class="current">1 250 ₽</span>
+                        <span class="old">1 470 ₽</span>
+                    </div>
+                    <div class="product-card__name">Автоматическая поилка-фонтан с фильтрацией 2л</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="featured-banner">
+                    <div class="featured-banner__content">
+                        <span class="featured-banner__tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                                <path d="m15 9-6 6" />
+                                <path d="M9 9h.01" />
+                                <path d="M15 15h.01" />
+                            </svg>
+                            Акция
+                        </span>
+                        <h3 class="featured-banner__title">Скидки <span>до 50%</span></h3>
+                        <p class="featured-banner__text">На корма и лакомства класса холистик</p>
+                        <a href="#" class="featured-banner__btn">Смотреть все</a>
+                    </div>
+                    <div class="featured-banner__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ===== -->
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Лучшие предложения</h2>
+                <a href="#" class="section__link">Смотреть все →</a>
+            </div>
+
+            <div class="products-grid products-grid--5">
+                <div class="product-card">
+                    <span class="product-card__badge hit">Хит</span>
+                    <div class="product-card__image">
+                        <img src="img/dog.png" alt="Сухой холистик корм для взрослых собак">
+                    </div>
+                    <div class="product-card__price">
+                        <span class="current">1 766 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Eukanuba</span> Сухой холистик корм для взрослых
+                        собак, утка/ягненок, 3кг</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge new">Новинка</span>
+                    <div class="product-card__image"><img src="img/mini.png" alt="Натуральные мясные кусочки в желе">
+                    </div>
+                    <div class="product-card__price">
+                        <span class="current">1 152 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Cesar</span> Натуральные мясные кусочки в желе
+                        для мини-пород, 24шт</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge">-30%</span>
+                    <div class="product-card__image"><img src="img/kiti.png" alt="Гипоаллергенный сухой корм для котят">
+                    </div>
+                    <div class="product-card__price">
+                        <span class="current">2 036 ₽</span>
+                        <span class="old">2 910 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Eukanuba</span> Гипоаллергенный сухой корм для
+                        котят, индейка, 4кг</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge" style="background:var(--Gold);">Суперцена</span>
+                    <div class="product-card__image"><img src="img/rabbit.png" alt="Вяленое филе кролика"></div>
+                    <div class="product-card__price">
+                        <span class="current">434 ₽</span>
+                        <span class="old">720 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Savita</span> Вяленое филе кролика для
+                        дрессировки собак, 150г</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-card__badge hit">-25%</span>
+                    <div class="product-card__image"><img src="img/mini-dog.png"
+                            alt="Сухой корм для собак мелких пород"></div>
+                    <div class="product-card__price">
+                        <span class="current">890 ₽</span>
+                        <span class="old">1 187 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Royal Canin</span> Сухой корм для собак мелких
+                        пород, 1.5кг</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+
+                <div class="product-card none">
+                    <span class="product-card__badge">-20%</span>
+                    <div class="product-card__image"><img src="img/kiti.png" alt="Гипоаллергенный сухой корм для котят">
+                    </div>
+                    <div class="product-card__price">
+                        <span class="current">1 036 ₽</span>
+                        <span class="old">1 910 ₽</span>
+                    </div>
+                    <div class="product-card__name"><span class="brand">Eukanuba</span> Гипоаллергенный сухой корм для
+                        котят, кролик, 2кг</div>
+                    <button class="product-card__btn">В корзину</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== БРЕНДЫ ===== -->
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Популярные бренды <a href="#">все бренды ›</a></h2>
+            </div>
+            <div class="brands">
+                <div class="brands-logos" id="brands-logos"></div>
+            </div>
+        </section>
+
+        <!-- ===== НОВОСТИ И АКЦИИ ===== -->
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Акции и Полезные новости</h2>
+            </div>
+            <div class="marketing-grid">
+                <div class="marketing-card">
+                    <div class="marketing-card__icon">
+                        <img src="img/pic2.png" alt="Скидки на профилактику">
+                    </div>
+                    <div class="marketing-card__content">
+                        <h3 class="marketing-card__title">Скидки до 40% на профилактику</h3>
+                        <p class="marketing-card__desc">Защитите питомца вовремя! Ветеринарные диеты и защитные средства
+                            со скидкой до конца месяца.</p>
+                    </div>
+                </div>
+                <div class="marketing-card">
+                    <div class="marketing-card__icon">
+                        <img src="img/pic1.jpeg" alt="Как выбрать умный гаджет">
+                    </div>
+                    <div class="marketing-card__content">
+                        <h3 class="marketing-card__title">Как выбрать умный гаджет?</h3>
+                        <p class="marketing-card__desc">Экспертный разбор: мониторинг активности, GPS-трекеры и здоровье
+                            питомца под полным цифровым контролем.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== УСЛУГИ ===== -->
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Наши сервисы для питомцев</h2>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/1.png" alt="Выгул"></div>
+                    <div class="service-card__name">Выгул</div>
+                    <div class="service-card__desc">Заботливые ситтеры</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/2.png" alt="Отель"></div>
+                    <div class="service-card__name">Отель</div>
+                    <div class="service-card__desc">Уютные номера</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/3.png" alt="Ветеринария"></div>
+                    <div class="service-card__name">Ветеринария</div>
+                    <div class="service-card__desc">Врачи на связи 24/7</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/4.png" alt="Груминг"></div>
+                    <div class="service-card__name">Груминг</div>
+                    <div class="service-card__desc">Бережный уход</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/5.png" alt="Няня"></div>
+                    <div class="service-card__name">Няня</div>
+                    <div class="service-card__desc">Присмотрим дома</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon"><img src="img/6.png" alt="Рационы"></div>
+                    <div class="service-card__name">Рационы</div>
+                    <div class="service-card__desc">Натуральное питание</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПРИСТРОЙСТВО ===== -->
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Объявления о пристройстве животных</h2>
+            </div>
+            <div class="adopt-grid">
+                <div class="adopt-card">
+                    <div class="adopt-card__image">
+                        <img src="img/bonya.jpeg" alt="Бонифаций">
+                        <span class="adopt-card__badge">Приют «Ищу Дом»</span>
+                    </div>
+                    <div class="adopt-card__info">
+                        <div class="adopt-card__name">Бонифаций</div>
+                        <div class="adopt-card__meta">2 года • Ласковый, привит</div>
+                        <span class="adopt-card__tags">#без_особенностей</span>
+                    </div>
+                </div>
+                <div class="adopt-card">
+                    <div class="adopt-card__image">
+                        <img src="img/simle-dog.jpeg" alt="Алина">
+                        <span class="adopt-card__badge">Приют «Верность»</span>
+                    </div>
+                    <div class="adopt-card__info">
+                        <div class="adopt-card__name">Алина</div>
+                        <div class="adopt-card__meta">1.5 года • Активная, стерилизована</div>
+                        <span class="adopt-card__tags">#дрессирована</span>
+                    </div>
+                </div>
+                <div class="adopt-card">
+                    <div class="adopt-card__image">
+                        <img src="img/misha.jpeg" alt="Миша">
+                        <span class="adopt-card__badge">Частное лицо</span>
+                    </div>
+                    <div class="adopt-card__info">
+                        <div class="adopt-card__name">Миша</div>
+                        <div class="adopt-card__meta">4 месяца • Игривый, здоров</div>
+                        <span class="adopt-card__tags">#в_добрые_руки</span>
+                    </div>
+                </div>
+                <div class="adopt-card none-card">
+                    <div class="adopt-card__image">
+                        <img src="img/yasha.jpeg" alt="Яша">
+                        <span class="adopt-card__badge">Частное лицо</span>
+                    </div>
+                    <div class="adopt-card__info">
+                        <div class="adopt-card__name">Яша</div>
+                        <div class="adopt-card__meta">2 месяца • Спокойный, здоров</div>
+                        <span class="adopt-card__tags">#в_добрые_руки</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 class="footer__title">О компании</h4>
+                <div class="footer__links">
+                    <a href="#">О нас</a>
+                    <a href="#">Новости компании</a>
+                    <a href="#">Контакты и адреса</a>
+                    <a href="#">Вакансии</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Покупателям</h4>
+                <div class="footer__links">
+                    <a href="#">Условия доставки</a>
+                    <a href="#">Способы оплаты</a>
+                    <a href="#">Обмен и возврат</a>
+                    <a href="#">Бонусная программа</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Каталог</h4>
+                <div class="footer__links">
+                    <a href="#">Корма холистики</a>
+                    <a href="#">Умные ошейники</a>
+                    <a href="#">Игрушки и лакомства</a>
+                    <a href="#">Ветеринарные препараты</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Мы в соцсетях</h4>
+                <div class="footer__links">
+                    <a href="#">Telegram-канал</a>
+                    <a href="#">ВКонтакте</a>
+                    <a href="#">YouTube-блог</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© 2026 Интернет-магазин «Лапочки». Все права защищены.</span>
+                <span>8 (800) 555-35-35 (Бесплатно по РФ)</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/logo.js"></script>
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>

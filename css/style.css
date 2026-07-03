@@ -657,6 +657,7 @@ h6 {
     letter-spacing: 0.02em;
 }
 
+/* ===== БАННЕР ===== */
 .banner {
     flex: 1;
     border-radius: var(--radius);
@@ -1500,6 +1501,7 @@ h6 {
 
 .nav-mobile__parent.open .nav-mobile__sub {
     display: block;
+    animation: slideDown 0.2s ease;
 }
 
 .nav-mobile__sub-title {
@@ -1587,6 +1589,28 @@ h6 {
 }
 
 /* ============================================
+   АКТИВНЫЕ СОСТОЯНИЯ
+   ============================================ */
+.nav-mobile__parent.active>.nav-mobile__parent-title {
+    color: var(--goodgreen);
+}
+
+.nav-mobile__parent.active .nav-mobile__arrow {
+    color: var(--goodgreen);
+}
+
+.header-actions__btn--menu.active,
+.header-actions__btn--search.active {
+    background: var(--LWarm);
+    color: var(--goodgreen);
+}
+
+.header-actions__btn--menu.active svg,
+.header-actions__btn--search.active svg {
+    color: var(--goodgreen);
+}
+
+/* ============================================
    АДАПТИВНОСТЬ
    ============================================ */
 
@@ -1606,9 +1630,6 @@ h6 {
 
     .sidebar {
         flex: 1;
-    }
-
-    .sidebar {
         position: relative;
     }
 
@@ -1627,7 +1648,6 @@ h6 {
     }
 
     .sidebar.open .sidebar__title {
-        display: block;
         padding-top: 8px;
     }
 
@@ -1756,290 +1776,6 @@ h6 {
     }
 }
 
-/* ===== ПЛАНШЕТ (741-1100px) - основное правило ===== */
-@media (min-width: 741px) and (max-width: 1100px) {
-    .nav-categories-toggle {
-        display: flex !important;
-    }
-
-    .nav-mobile {
-        display: none !important;
-    }
-
-    .sidebar {
-        display: none !important;
-    }
-
-    .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto;
-        flex: 1;
-    }
-
-    .nav-links a {
-        padding: 12px 14px;
-        font-size: var(--fs-sm);
-        white-space: nowrap;
-        border-bottom: 3px solid transparent;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .nav-links a svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .nav-categories-dropdown {
-        left: 20px;
-        min-width: 260px;
-    }
-}
-
-/* ===== МОБИЛЬНЫЙ (до 740px) ===== */
-@media (max-width: 740px) {
-    .search-wrap {
-        display: none;
-    }
-
-    .header-actions__btn--search {
-        display: flex;
-    }
-
-    .header-actions__btn--menu {
-        display: flex;
-    }
-
-    .header-contacts {
-        display: none;
-    }
-
-    .sidebar {
-        display: none !important;
-    }
-
-    .nav-categories-toggle {
-        display: none !important;
-    }
-
-    .nav-categories-dropdown {
-        display: none !important;
-    }
-
-    .nav-links {
-        display: none !important;
-    }
-
-    .nav-mobile {
-        display: flex !important;
-    }
-
-    .main-nav {
-        position: relative;
-        padding: 0 10px;
-    }
-
-    .main-nav .container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        width: 100%;
-        padding: 0;
-        background: var(--white);
-        border-radius: 0 0 var(--radius) var(--radius);
-        box-shadow: var(--shadow);
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        max-height: 80vh;
-        overflow-y: auto;
-        padding-top: 8px;
-    }
-
-    .main-nav .container--open {
-        display: flex !important;
-    }
-
-    .adopt-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section {
-        margin: 60px 0;
-    }
-
-    .none-card {
-        display: block;
-    }
-}
-
-/* ===== ДЕСКТОП (более 1100px) ===== */
-@media (min-width: 1101px) {
-    .nav-categories-toggle {
-        display: none !important;
-    }
-
-    .nav-categories-dropdown {
-        display: none !important;
-    }
-
-    .nav-mobile {
-        display: none !important;
-    }
-
-    .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto;
-        flex: 1;
-    }
-}
-
-/* ===== АКТИВНЫЙ ПУНКТ В МОБИЛЬНОМ МЕНЮ ===== */
-.nav-mobile__parent.active>.nav-mobile__parent-title {
-    color: var(--goodgreen);
-}
-
-.nav-mobile__parent.active .nav-mobile__arrow {
-    color: var(--goodgreen);
-}
-
-/* ===== ИКОНКА СТРЕЛКИ ПРИ ОТКРЫТИИ ===== */
-.nav-mobile__parent.open .nav-mobile__arrow {
-    transform: rotate(90deg);
-    color: var(--goodgreen);
-}
-
-/* ===== АНИМАЦИЯ ПОДМЕНЮ ===== */
-.nav-mobile__sub {
-    display: none;
-    background: #f9f9f9;
-    padding: 4px 0;
-    animation: slideDown 0.2s ease;
-}
-
-.nav-mobile__parent.open .nav-mobile__sub {
-    display: block;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== АКТИВНОЕ СОСТОЯНИЕ КНОПКИ БУРГЕРА ===== */
-.header-actions__btn--menu.active {
-    background: var(--LWarm);
-    color: var(--goodgreen);
-}
-
-.header-actions__btn--menu.active svg {
-    color: var(--goodgreen);
-}
-
-/* ===== АКТИВНОЕ СОСТОЯНИЕ КНОПКИ ПОИСКА ===== */
-.header-actions__btn--search.active {
-    background: var(--LWarm);
-    color: var(--goodgreen);
-}
-
-.header-actions__btn--search.active svg {
-    color: var(--goodgreen);
-}
-
-/* ===== БАННЕР С АДАПТИВНЫМ ИЗОБРАЖЕНИЕМ ===== */
-.banner {
-    flex: 1;
-    border-radius: var(--radius);
-    padding: 40px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    position: relative;
-    min-height: 280px;
-    box-shadow: var(--shadow);
-    background: url('../img/bannerYPD.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-/* ===== МОБИЛЬНАЯ ВЕРСИЯ БАННЕРА (до 770px) ===== */
-@media (max-width: 770px) {
-
-
-    .products-grid--5 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .marketing-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
-@media (max-width: 658px) {
-    .banner {
-        background: url('../img/banner-mob.png') no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 200px;
-        padding: 30px 24px;
-    }
-
-    .banner {
-        min-height: 180px;
-        padding: 24px 16px;
-    }
-
-    .banner__title {
-        font-size: var(--fs-lg);
-    }
-
-    .banner__text {
-        font-size: var(--fs-sm);
-        margin-bottom: 16px;
-    }
-
-    .banner__btn {
-        padding: 10px 24px;
-        font-size: var(--fs-sm);
-    }
-}
-
-/* ===== ПЛАНШЕТНАЯ ВЕРСИЯ (741-1100px) ===== */
-@media (min-width: 741px) and (max-width: 1100px) {
-    .banner {
-        padding: 30px 32px;
-        min-height: 220px;
-    }
-
-    .banner__title {
-        font-size: var(--fs-2xl);
-    }
-}
-
-/* ===== ДЕСКТОПНАЯ ВЕРСИЯ (> 1100px) ===== */
-@media (min-width: 1101px) {
-    .banner {
-        padding: 40px 48px;
-        min-height: 280px;
-    }
-}
-
-/* ===== НАВИГАЦИЯ (адаптив) ===== */
 /* ===== ПЛАНШЕТ (741-1100px) ===== */
 @media (min-width: 741px) and (max-width: 1100px) {
     .nav-categories-toggle {
@@ -2080,6 +1816,15 @@ h6 {
         left: 20px;
         min-width: 260px;
     }
+
+    .banner {
+        padding: 30px 32px;
+        min-height: 220px;
+    }
+
+    .banner__title {
+        font-size: var(--fs-2xl);
+    }
 }
 
 /* ===== МОБИЛЬНЫЙ (до 740px) ===== */
@@ -2161,12 +1906,25 @@ h6 {
         display: block;
     }
 
+
+
     .banner {
-        justify-content: center;
+        min-height: 180px;
+        padding: 24px 16px;
     }
 
-    .banner__content {
-        max-width: 100%;
+    .banner__title {
+        font-size: var(--fs-lg);
+    }
+
+    .banner__text {
+        font-size: var(--fs-sm);
+        margin-bottom: 16px;
+    }
+
+    .banner__btn {
+        padding: 10px 24px;
+        font-size: var(--fs-sm);
     }
 }
 
@@ -2189,6 +1947,36 @@ h6 {
         flex-direction: row !important;
         overflow-x: auto;
         flex: 1;
+    }
+
+    .banner {
+        padding: 40px 48px;
+        min-height: 280px;
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ ===== */
+@media (max-width: 770px) {
+    .products-grid--5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marketing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 658px) {
+    .banner {
+        background: url('../img/banner-mob.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 200px;
+        padding: 30px 24px;
+    }
+
+    .banner__content {
+        max-width: 100%;
     }
 }
 

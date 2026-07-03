@@ -755,7 +755,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .section__title {
@@ -764,6 +764,7 @@ h6 {
     font-weight: 700;
     color: var(--text);
     letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .section__title a {
@@ -1900,6 +1901,11 @@ h6 {
 
     .section {
         margin: 60px 0;
+    }
+
+    .section__header {
+
+        margin-bottom: 20px;
     }
 
     .section__title {

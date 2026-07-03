@@ -1902,6 +1902,10 @@ h6 {
         margin: 60px 0;
     }
 
+    .section__title {
+        font-size: var(--fs-lg);
+    }
+
     .none-card {
         display: block;
     }
